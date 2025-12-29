@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Rustic, Elegant Palette */
+  /* Cream Background */
+  --background: 40 30% 96%;
+  /* Dark Green Text */
+  --foreground: 160 30% 15%;
+
+  /* Gold/Bronze Primary */
+  --primary: 35 60% 45%;
+  --primary-foreground: 40 30% 96%;
+
+  /* Sage Green Secondary */
+  --secondary: 140 15% 90%;
+  --secondary-foreground: 160 30% 15%;
+
+  /* Muted warm beige */
+  --muted: 40 20% 90%;
+  --muted-foreground: 160 10% 40%;
+
+  /* Burnt Orange Accent */
+  --accent: 20 70% 55%;
+  --accent-foreground: 40 30% 96%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 160 10% 85%;
+  --input: 160 10% 85%;
+  --ring: 35 60% 45%;
+
+  --radius: 0.25rem;
+
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'DM Sans', sans-serif;
+}
+
+.dark {
+  /* Inverse for dark mode if needed, keeping mostly dark green theme */
+  --background: 160 30% 10%;
+  --foreground: 40 30% 90%;
+
+  --primary: 35 60% 50%;
+  --primary-foreground: 160 30% 10%;
+
+  --secondary: 160 20% 20%;
+  --secondary-foreground: 40 30% 90%;
+
+  --muted: 160 20% 20%;
+  --muted-foreground: 160 10% 60%;
+
+  --accent: 20 70% 55%;
+  --accent-foreground: 40 30% 96%;
+
+  --destructive: 0 62% 30%;
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 160 20% 20%;
+  --input: 160 20% 20%;
+  --ring: 35 60% 50%;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    @apply font-bold tracking-tight;
+  }
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
